@@ -1,0 +1,15 @@
+C:\Users\rvcon\Revature\rvconnn\21game\bin\Debug\net8.0\21game.exe
+C:\Users\rvcon\Revature\rvconnn\21game\bin\Debug\net8.0\21game.deps.json
+C:\Users\rvcon\Revature\rvconnn\21game\bin\Debug\net8.0\21game.runtimeconfig.json
+C:\Users\rvcon\Revature\rvconnn\21game\bin\Debug\net8.0\21game.dll
+C:\Users\rvcon\Revature\rvconnn\21game\bin\Debug\net8.0\21game.pdb
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\21game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\21game.AssemblyInfoInputs.cache
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\21game.AssemblyInfo.cs
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\21game.csproj.CoreCompileInputs.cache
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\21game.sourcelink.json
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\21game.dll
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\refint\21game.dll
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\21game.pdb
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\21game.genruntimeconfig.cache
+C:\Users\rvcon\Revature\rvconnn\21game\obj\Debug\net8.0\ref\21game.dll
