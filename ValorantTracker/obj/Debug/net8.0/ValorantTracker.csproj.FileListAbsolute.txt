@@ -1,0 +1,15 @@
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\bin\Debug\net8.0\ValorantTracker.exe
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\bin\Debug\net8.0\ValorantTracker.deps.json
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\bin\Debug\net8.0\ValorantTracker.runtimeconfig.json
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\bin\Debug\net8.0\ValorantTracker.dll
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\bin\Debug\net8.0\ValorantTracker.pdb
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\ValorantTracker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\ValorantTracker.AssemblyInfoInputs.cache
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\ValorantTracker.AssemblyInfo.cs
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\ValorantTracker.csproj.CoreCompileInputs.cache
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\ValorantTracker.sourcelink.json
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\ValorantTracker.dll
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\refint\ValorantTracker.dll
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\ValorantTracker.pdb
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\ValorantTracker.genruntimeconfig.cache
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\ValorantTracker\obj\Debug\net8.0\ref\ValorantTracker.dll
