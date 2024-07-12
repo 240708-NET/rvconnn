@@ -48,20 +48,30 @@
 
     static void AllAgents()
     {
-
         if (entries.Count == 0)
         {
             Console.WriteLine("No entries found.");
+            return;
         }
-            
-            Table table = new Table();
-            table.Line("      Agent      |      Map      |    Avg CS    |    W/L   ");
 
-        foreach(var entry in entries)
+        var agentGroups = entries.GroupBy(entry => entry.agent.ToUpper());
+
+        Table table = new Table();
+        table.Line("      Agent      |    Avg CS    |    Avg W/L   ");
+
+        foreach (var group in agentGroups)
         {
+            string agentName = group.Key;
+            
+            double avgAvgCS = group.Average(entry => entry.avgcs);
+            
+            int totalGames = group.Count();
+            int totalWins = group.Count(entry => entry.wl == "W");
+            
+            double avgWL = (double)totalWins / totalGames;
 
-            table.Line("------------------------------------------------------------");
-            Console.WriteLine($"      {entry.agent}      |      {entry.map}      |      {entry.avgcs}      |     {entry.wl}      ");
+            table.Line("------------------------------------------------");
+            Console.WriteLine($"      {agentName}      |     {avgAvgCS:F2}     |     {avgWL:F2}     ");
         }
     }
 
