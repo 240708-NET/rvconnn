@@ -48,13 +48,20 @@
 
     static void AllAgents()
     {
+
         if (entries.Count == 0)
         {
             Console.WriteLine("No entries found.");
         }
+            
+            Table table = new Table();
+            table.Line("      Agent      |      Map      |    Avg CS    |    W/L   ");
+
         foreach(var entry in entries)
         {
-            Console.WriteLine($"Agent: {entry.agent}, Map: {entry.map}, Average Combat Score: {entry.avgcs}, W/L: {entry.wl}");
+
+            table.Line("------------------------------------------------------------");
+            Console.WriteLine($"      {entry.agent}      |      {entry.map}      |      {entry.avgcs}      |     {entry.wl}      ");
         }
     }
 
@@ -93,10 +100,16 @@
         
         var agentEntries = entries.Where(entry => entry.agent.ToUpper() == response).ToList();
         
-        Console.WriteLine($"Entries for Agent: {response}");
+        Console.WriteLine($"Stats for Agent: {response}");
+        
+        Table table = new Table();
+        table.Line("     Map      |    Avg CS    |     W/L   ");
+        
         foreach (var entry in agentEntries)
         {
-            Console.WriteLine($"Map: {entry.map}, Average Combat Score: {entry.avgcs}, W/L: {entry.wl}");
+            
+            table.Line("--------------------------------------------");
+            Console.WriteLine($"     {entry.map}   |       {entry.avgcs}     |     {entry.wl}");
         }
     }
 
