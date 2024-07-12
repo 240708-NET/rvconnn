@@ -60,7 +60,44 @@
 
     static void OneAgent()
     {
-        Console.WriteLine("Show one");
+        var agentNames = entries.Select(entry => entry.agent.ToUpper()).Distinct().ToList();
+        
+        if (agentNames.Count == 0)
+        {
+            Console.WriteLine("No entries found.");
+            return;
+        } 
+
+        Console.WriteLine("Choose an Agent to view their stats:");
+        foreach (var agent in agentNames)
+        {
+            Console.WriteLine(agent);
+        }
+        
+        string response;
+        bool ValidAgent = false;
+        
+        do
+        {
+            response = Console.ReadLine().ToUpper();
+            
+            if (agentNames.Contains(response))
+            {
+                ValidAgent = true;
+            }
+            else
+            {
+                Console.WriteLine("Invalid agent name. Please choose from the list above:");
+            }
+        } while (!ValidAgent);
+        
+        var agentEntries = entries.Where(entry => entry.agent.ToUpper() == response).ToList();
+        
+        Console.WriteLine($"Entries for Agent: {response}");
+        foreach (var entry in agentEntries)
+        {
+            Console.WriteLine($"Map: {entry.map}, Average Combat Score: {entry.avgcs}, W/L: {entry.wl}");
+        }
     }
 
     static void NewEntry()
@@ -85,8 +122,5 @@
             Console.Write("Do you want to make another entry? [Y or N]: ");
             response = Console.ReadLine();
         } while(response.ToUpper() == "Y");
-        
-
     }
-
 }
