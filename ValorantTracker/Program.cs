@@ -48,7 +48,14 @@
 
     static void AllAgents()
     {
-        Console.WriteLine("Show all");
+        if (entries.Count == 0)
+        {
+            Console.WriteLine("No entries found.");
+        }
+        foreach(var entry in entries)
+        {
+            Console.WriteLine($"Agent: {entry.agent}, Map: {entry.map}, Average Combat Score: {entry.avgcs}, W/L: {entry.wl}");
+        }
     }
 
     static void OneAgent()
