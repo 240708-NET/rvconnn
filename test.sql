@@ -4,5 +4,3 @@ CREATE table music(
 )
 
 
-ALTER TABLE music
-RENAME COLUMN music TO soundtrack;
