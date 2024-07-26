@@ -1,0 +1,15 @@
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\bin\Debug\net8.0\SixSidedSandwhiches.exe
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\bin\Debug\net8.0\SixSidedSandwhiches.deps.json
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\bin\Debug\net8.0\SixSidedSandwhiches.runtimeconfig.json
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\bin\Debug\net8.0\SixSidedSandwhiches.dll
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\bin\Debug\net8.0\SixSidedSandwhiches.pdb
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\SixSidedSandwhiches.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\SixSidedSandwhiches.AssemblyInfoInputs.cache
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\SixSidedSandwhiches.AssemblyInfo.cs
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\SixSidedSandwhiches.csproj.CoreCompileInputs.cache
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\SixSidedSandwhiches.sourcelink.json
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\SixSidedSandwhiches.dll
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\refint\SixSidedSandwhiches.dll
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\SixSidedSandwhiches.pdb
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\SixSidedSandwhiches.genruntimeconfig.cache
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\SixSidedSandwhiches\obj\Debug\net8.0\ref\SixSidedSandwhiches.dll

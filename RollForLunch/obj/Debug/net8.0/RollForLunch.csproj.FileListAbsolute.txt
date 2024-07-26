@@ -1,0 +1,15 @@
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\bin\Debug\net8.0\RollForLunch.exe
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\bin\Debug\net8.0\RollForLunch.deps.json
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\bin\Debug\net8.0\RollForLunch.runtimeconfig.json
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\bin\Debug\net8.0\RollForLunch.dll
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\bin\Debug\net8.0\RollForLunch.pdb
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\RollForLunch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\RollForLunch.AssemblyInfoInputs.cache
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\RollForLunch.AssemblyInfo.cs
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\RollForLunch.csproj.CoreCompileInputs.cache
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\RollForLunch.sourcelink.json
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\RollForLunch.dll
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\refint\RollForLunch.dll
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\RollForLunch.pdb
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\RollForLunch.genruntimeconfig.cache
+C:\Users\rvcon\OneDrive\Desktop\Revature\rvconnn\RollForLunch\obj\Debug\net8.0\ref\RollForLunch.dll
