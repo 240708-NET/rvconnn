@@ -19,7 +19,7 @@ class Program
         bool running = true;    
         while (running)
         {    
-            Console.WriteLine("Please select an option:");
+            Console.WriteLine("\nPlease select an option:");
             Console.WriteLine("[1] View all created meals");
             Console.WriteLine("[2] Create a new Lunch");
             Console.WriteLine("[3] Exit");
@@ -32,20 +32,20 @@ class Program
                     break;
                 
                 case "2":
-                    Console.WriteLine("First choose an entree:");
-                    Console.WriteLine("[1] Ramen");
-                    Console.WriteLine("[2] Salad");
+                    Console.WriteLine("\nFirst choose an entree:");
+                    Console.WriteLine("[1] Bowl");
+                    Console.WriteLine("[2] Ramen");
                     Console.WriteLine("[3] Sandwhich");
                     Console.WriteLine("Type anything else to return to the menu");
                     string EntreeOption = Console.ReadLine();
                         switch (EntreeOption)
                         {
                             case "1":
-                                NewRamen();
+                                NewBowl();
                             break;
 
                             case "2":
-                                Console.WriteLine("Welcome Back, Roll For Lunch!");
+                                NewRamen();
                             break;
 
                             case "3":
@@ -71,6 +71,16 @@ class Program
         }    
     }
 
+    static void NewBowl()
+    {
+        Bowl bowl = new Bowl();
+        bowl.CreateBowl();
+        string lunch = bowl.ToString();
+        CreatedLunches.Add(lunch);
+
+        Console.WriteLine("\nHere's your Bowl!");
+        Console.WriteLine(lunch);
+    }
 
     static void NewRamen()
     {
@@ -79,7 +89,7 @@ class Program
         string lunch = ramen.ToString();
         CreatedLunches.Add(lunch);
 
-        Console.WriteLine("Here's your Ramen!");
+        Console.WriteLine("\nHere's your Ramen!");
         Console.WriteLine(lunch);
     }
 
@@ -90,13 +100,13 @@ class Program
         string lunch = sandwhich.ToString();
         CreatedLunches.Add(lunch);
 
-        Console.WriteLine("Here's your Sandwhich!");
+        Console.WriteLine("\nHere's your Sandwhich!");
         Console.WriteLine(lunch);
     }
 
     public static string Roll(string optionName, string[] options)
     {
-        Console.WriteLine($"Roll for {optionName} (Enter Anything):");
+        Console.WriteLine($"\nRoll for {optionName} (Enter Anything):");
         Console.WriteLine($"Options: {string.Join(", ",options)}");
         Console.ReadLine(); 
 
@@ -104,7 +114,7 @@ class Program
         int randomIndex = random.Next(options.Length);
         string selectedOption = options[randomIndex];
 
-        Console.WriteLine($"{optionName} selected: {selectedOption}");
+        Console.WriteLine($"\n{optionName} selected: {selectedOption}");
         return selectedOption;
     }
 
