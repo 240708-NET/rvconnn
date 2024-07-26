@@ -1,4 +1,4 @@
-class Sandwhich
+class Sandwich
 {
     public string Bread { get; set; }
     public string Sauce { get; set; }
@@ -6,7 +6,7 @@ class Sandwhich
     public string Cheese { get; set; }
     public string Extra { get; set; }
 
-    public void CreateSandwhich()
+    public void CreateSandwich()
     {
         string[] BreadOptions = { "white", "Wheat", "Rye", "Brioche", "Ciabatta", "Pumpernickel" };
         string[] SauceOptions = { "Ketchup", "Chipotle Mayo", "Chick-Fil-A Sauce", "Mustard", "Barbecue", "Mayo" };
@@ -23,6 +23,6 @@ class Sandwhich
 
     public override string ToString()
     {
-        return $"Sandwhich on {Bread} bread, with {Sauce}, {Main}, {Cheese}, and {Extra}!";
+        return $"Sandwich on {Bread} bread, with {Sauce}, {Main}, {Cheese}, and {Extra}!";
     }
 }

@@ -8,8 +8,8 @@ class Program
         
         //I want to create a console app that creates lunches for the user
         //option 1 will allow the user to view all past created meals(data persistance)
-        //option 2 will allow the user to choose between three different entree items: Salad, Sandwhich, Ramen
-        //After selecting an entree it will take the user through different aspects of the item, e.g. for sandwhich: bread, main item, cheese
+        //option 2 will allow the user to choose between three different entree items: Salad, Sandwich, Ramen
+        //After selecting an entree it will take the user through different aspects of the item, e.g. for sandwich: bread, main item, cheese
         //the user will first see all of the bread options and enter for the app to randomly choose one of the options
         //after going through each option, the app will list the choices for the completed item and will cycle back to the option menu
 
@@ -35,7 +35,7 @@ class Program
                     Console.WriteLine("\nFirst choose an entree:");
                     Console.WriteLine("[1] Bowl");
                     Console.WriteLine("[2] Ramen");
-                    Console.WriteLine("[3] Sandwhich");
+                    Console.WriteLine("[3] Sandwich");
                     Console.WriteLine("Type anything else to return to the menu");
                     string EntreeOption = Console.ReadLine();
                         switch (EntreeOption)
@@ -49,7 +49,7 @@ class Program
                             break;
 
                             case "3":
-                                NewSandwhich();
+                                NewSandwich();
                             break;
                                 
                             default:   
@@ -109,14 +109,14 @@ class Program
         Console.WriteLine(lunch);
     }
 
-    static void NewSandwhich()
+    static void NewSandwich()
     {
-        Sandwhich sandwhich = new Sandwhich();
-        sandwhich.CreateSandwhich();
-        string lunch = sandwhich.ToString();
+        Sandwich sandwich = new Sandwich();
+        sandwich.CreateSandwich();
+        string lunch = sandwich.ToString();
         CreatedLunches.Add(lunch);
 
-        Console.WriteLine("\nHere's your Sandwhich!");
+        Console.WriteLine("\nHere's your Sanwhich!");
         Console.WriteLine(lunch);
     }
 
