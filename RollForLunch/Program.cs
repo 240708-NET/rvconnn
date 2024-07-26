@@ -49,7 +49,7 @@ class Program
                             break;
 
                             case "3":
-                                Console.WriteLine("Welcome Back, Roll For Lunch!");
+                                NewSandwhich();
                             break;
                                 
                             default:   
@@ -83,6 +83,16 @@ class Program
         Console.WriteLine(lunch);
     }
 
+    static void NewSandwhich()
+    {
+        Sandwhich sandwhich = new Sandwhich();
+        sandwhich.CreateSandwhich();
+        string lunch = sandwhich.ToString();
+        CreatedLunches.Add(lunch);
+
+        Console.WriteLine("Here's your Sandwhich!");
+        Console.WriteLine(lunch);
+    }
 
     public static string Roll(string optionName, string[] options)
     {
