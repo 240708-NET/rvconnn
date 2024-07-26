@@ -12,7 +12,7 @@ class Program
         //the user will first see all of the bread options and enter for the app to randomly choose one of the options
         //after going through each option, the app will list the choices for the completed item and will cycle back to the option menu
 
-        Console.WriteLine("Welcome to Roll for Lunch!");
+        Console.WriteLine("Welcome to Roll For Lunch!");
         Console.WriteLine("Let RNG decide your next lunchtime meal");
         
         bool running = true;    
@@ -35,25 +35,26 @@ class Program
                     Console.WriteLine("[1] Ramen");
                     Console.WriteLine("[2] Salad");
                     Console.WriteLine("[3] Sandwhich");
+                    Console.WriteLine("Type anything else to return to the menu");
                     string EntreeOption = Console.ReadLine();
-                    switch (EntreeOption)
-                    {
-                        case "1":
-                            Ramen();
-                        break;
+                        switch (EntreeOption)
+                        {
+                            case "1":
+                                Ramen();
+                            break;
 
-                        case "2":
-                            Salad();
-                        break;
+                            case "2":
+                                Salad();
+                            break;
 
-                        case "3":
-                            Sandwhich();
-                        break;
-                            
-                        default:   
-                            Console.WriteLine("Please enter a valid option!");
-                        break;
-                    }
+                            case "3":
+                                Sandwhich();
+                            break;
+                                
+                            default:   
+                                Console.WriteLine("Welcome Back, Roll For Lunch!");
+                            break;
+                        }
                     break;
                 
                 case "3":
