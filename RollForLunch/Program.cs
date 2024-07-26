@@ -1,6 +1,7 @@
 class Program
 {
 
+    static List<string> CreatedLunches = new List<string>();
     
     static void Main( string[] args )
     {
@@ -40,15 +41,15 @@ class Program
                         switch (EntreeOption)
                         {
                             case "1":
-                                Ramen();
+                                NewRamen();
                             break;
 
                             case "2":
-                                Salad();
+                                Console.WriteLine("Welcome Back, Roll For Lunch!");
                             break;
 
                             case "3":
-                                Sandwhich();
+                                Console.WriteLine("Welcome Back, Roll For Lunch!");
                             break;
                                 
                             default:   
@@ -68,6 +69,33 @@ class Program
             }
 
         }    
+    }
+
+
+    static void NewRamen()
+    {
+        Ramen ramen = new Ramen();
+        ramen.CreateRamen();
+        string lunch = ramen.ToString();
+        CreatedLunches.Add(lunch);
+
+        Console.WriteLine("Here's your Ramen!");
+        Console.WriteLine(lunch);
+    }
+
+
+    public static string Roll(string optionName, string[] options)
+    {
+        Console.WriteLine($"Roll for {optionName} (Enter Anything):");
+        Console.WriteLine($"Options: {string.Join(", ",options)}");
+        Console.ReadLine(); 
+
+        Random random = new Random();
+        int randomIndex = random.Next(options.Length);
+        string selectedOption = options[randomIndex];
+
+        Console.WriteLine($"{optionName} selected: {selectedOption}");
+        return selectedOption;
     }
 
 }
