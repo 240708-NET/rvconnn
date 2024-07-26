@@ -8,7 +8,7 @@ class Sandwich
 
     public void CreateSandwich()
     {
-        string[] BreadOptions = { "white", "Wheat", "Rye", "Brioche", "Ciabatta", "Pumpernickel" };
+        string[] BreadOptions = { "White", "Wheat", "Rye", "Brioche", "Ciabatta", "Pumpernickel" };
         string[] SauceOptions = { "Ketchup", "Chipotle Mayo", "Chick-Fil-A Sauce", "Mustard", "Barbecue", "Mayo" };
         string[] MainOptions = { "Ham", "Turkey", "Chicken", "Salami", "Pork", "Tuna" };
         string[] CheeseOptions = { "American", "Provolone", "Swiss", "Cheddar", "Gouda", "Pepper Jack" };

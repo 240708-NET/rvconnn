@@ -1,11 +1,15 @@
+using System;
+using System.Collections.Generic;
+using Microsoft.Data.SqlClient;
+
 class Program
 {
-
     static List<string> CreatedLunches = new List<string>();
-    
-    static void Main( string[] args )
+    static string connectionString = "Server=localhost;User Id=sa;Password=NotPassword123!;TrustServerCertificate=True;";
+
+    static void Main(string[] args)
     {
-        
+
         //I want to create a console app that creates lunches for the user
         //option 1 will allow the user to view all past created meals(data persistance)
         //option 2 will allow the user to choose between three different entree items: Salad, Sandwich, Ramen
@@ -15,10 +19,10 @@ class Program
 
         Console.WriteLine("Welcome to Roll For Lunch!");
         Console.WriteLine("Let RNG decide your next lunchtime meal");
-        
-        bool running = true;    
+
+        bool running = true;
         while (running)
-        {    
+        {
             Console.WriteLine("\nPlease select an option:");
             Console.WriteLine("[1] View all created meals");
             Console.WriteLine("[2] Create a new Lunch");
@@ -30,7 +34,7 @@ class Program
                 case "1":
                     ViewCreatedLunches();
                     break;
-                
+
                 case "2":
                     Console.WriteLine("\nFirst choose an entree:");
                     Console.WriteLine("[1] Bowl");
@@ -38,51 +42,73 @@ class Program
                     Console.WriteLine("[3] Sandwich");
                     Console.WriteLine("Type anything else to return to the menu");
                     string EntreeOption = Console.ReadLine();
-                        switch (EntreeOption)
-                        {
-                            case "1":
-                                NewBowl();
+                    switch (EntreeOption)
+                    {
+                        case "1":
+                            NewBowl();
                             break;
 
-                            case "2":
-                                NewRamen();
+                        case "2":
+                            NewRamen();
                             break;
 
-                            case "3":
-                                NewSandwich();
+                        case "3":
+                            NewSandwich();
                             break;
-                                
-                            default:   
-                                Console.WriteLine("Welcome Back, Roll For Lunch!");
+
+                        default:
+                            Console.WriteLine("Returning to main menu...");
                             break;
-                        }
+                    }
                     break;
-                
+
                 case "3":
                     Console.WriteLine("Bye Bye!");
                     running = false;
                     break;
-                
-                default:   
+
+                default:
                     Console.WriteLine("Please enter a valid option!");
                     break;
             }
-
-        }    
+        }
     }
 
     static void ViewCreatedLunches()
     {
-        if (CreatedLunches.Count == 0)
+        using (SqlConnection connection = new SqlConnection(connectionString))
         {
-            Console.WriteLine("\nNo Lunches created yet.");
-        }
-        else
-        {
-            Console.WriteLine("\nCreated Lunches:");
-            foreach (string lunch in CreatedLunches)
+            try
             {
-                Console.WriteLine(lunch);
+                connection.Open();
+
+                string query = "SELECT * FROM lunches";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (!reader.HasRows)
+                {
+                    Console.WriteLine("No Lunches created yet.");
+                }
+                else
+                {
+                    Console.WriteLine("\nYour Created Lunches:");
+                    while (reader.Read())
+                    {
+                        int lunchID = reader.GetInt32(reader.GetOrdinal("LunchID"));
+                        string type = reader.GetString(reader.GetOrdinal("Type"));
+                        string details = reader.GetString(reader.GetOrdinal("Details"));
+
+                        Console.WriteLine($"{lunchID}: {type} - {details}");
+                    }
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
             }
         }
     }
@@ -91,40 +117,46 @@ class Program
     {
         Bowl bowl = new Bowl();
         bowl.CreateBowl();
-        string lunch = bowl.ToString();
-        CreatedLunches.Add(lunch);
+        string lunchDetails = bowl.ToString();
+        CreatedLunches.Add(lunchDetails);
 
         Console.WriteLine("\nHere's your Bowl!");
-        Console.WriteLine(lunch);
+        Console.WriteLine(lunchDetails);
+
+        InsertLunchIntoDatabase("Bowl", lunchDetails);
     }
 
     static void NewRamen()
     {
         Ramen ramen = new Ramen();
         ramen.CreateRamen();
-        string lunch = ramen.ToString();
-        CreatedLunches.Add(lunch);
+        string lunchDetails = ramen.ToString();
+        CreatedLunches.Add(lunchDetails);
 
         Console.WriteLine("\nHere's your Ramen!");
-        Console.WriteLine(lunch);
+        Console.WriteLine(lunchDetails);
+
+        InsertLunchIntoDatabase("Ramen", lunchDetails);
     }
 
     static void NewSandwich()
     {
         Sandwich sandwich = new Sandwich();
         sandwich.CreateSandwich();
-        string lunch = sandwich.ToString();
-        CreatedLunches.Add(lunch);
+        string lunchDetails = sandwich.ToString();
+        CreatedLunches.Add(lunchDetails);
 
-        Console.WriteLine("\nHere's your Sanwhich!");
-        Console.WriteLine(lunch);
+        Console.WriteLine("\nHere's your Sandwich!");
+        Console.WriteLine(lunchDetails);
+
+        InsertLunchIntoDatabase("Sandwich", lunchDetails);
     }
 
     public static string Roll(string optionName, string[] options)
     {
         Console.WriteLine($"\nRoll for {optionName} (Enter Anything):");
-        Console.WriteLine($"Options: {string.Join(", ",options)}");
-        Console.ReadLine(); 
+        Console.WriteLine($"Options: {string.Join(", ", options)}");
+        Console.ReadLine();
 
         Random random = new Random();
         int randomIndex = random.Next(options.Length);
@@ -134,4 +166,27 @@ class Program
         return selectedOption;
     }
 
+    static void InsertLunchIntoDatabase(string type, string details)
+    {
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            try
+            {
+                connection.Open();
+
+                string query = "INSERT INTO lunches (Type, Details) VALUES (@Type, @Details)";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Type", type);
+                command.Parameters.AddWithValue("@Details", details);
+
+                command.ExecuteNonQuery();
+                Console.WriteLine("Lunch added to database.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+    }
 }
