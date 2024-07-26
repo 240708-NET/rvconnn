@@ -28,7 +28,7 @@ class Program
             switch (option)
             {
                 case "1":
-                    Console.WriteLine("option 1");
+                    ViewCreatedLunches();
                     break;
                 
                 case "2":
@@ -69,6 +69,22 @@ class Program
             }
 
         }    
+    }
+
+    static void ViewCreatedLunches()
+    {
+        if (CreatedLunches.Count == 0)
+        {
+            Console.WriteLine("\nNo Lunches created yet.");
+        }
+        else
+        {
+            Console.WriteLine("\nCreated Lunches:");
+            foreach (string lunch in CreatedLunches)
+            {
+                Console.WriteLine(lunch);
+            }
+        }
     }
 
     static void NewBowl()
