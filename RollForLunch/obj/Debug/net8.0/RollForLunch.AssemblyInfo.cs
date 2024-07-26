@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RollForLunch")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+466351f3dc04083f4acea01a79f46300694df332")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a33a9f43e6c6b411dc433569ba805b0411af7087")]
 [assembly: System.Reflection.AssemblyProductAttribute("RollForLunch")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RollForLunch")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,14 +13,14 @@ class Program
         //after going through each option, the app will list the choices for the completed item and will cycle back to the option menu
 
         Console.WriteLine("Welcome to Roll for Lunch!");
-        Console.WriteLine("Let RNG decide your next lunchtime meal!");
+        Console.WriteLine("Let RNG decide your next lunchtime meal");
         
         bool running = true;    
         while (running)
         {    
-            Console.WriteLine("Please select an option.");
-            Console.WriteLine("[1] View all created meals.");
-            Console.WriteLine("[2] Create a new Lunch.");
+            Console.WriteLine("Please select an option:");
+            Console.WriteLine("[1] View all created meals");
+            Console.WriteLine("[2] Create a new Lunch");
             Console.WriteLine("[3] Exit");
             string option = Console.ReadLine();
 
@@ -29,13 +29,38 @@ class Program
                 case "1":
                     Console.WriteLine("option 1");
                     break;
+                
                 case "2":
-                    Console.WriteLine("option 1");
+                    Console.WriteLine("First choose an entree:");
+                    Console.WriteLine("[1] Ramen");
+                    Console.WriteLine("[2] Salad");
+                    Console.WriteLine("[3] Sandwhich");
+                    string EntreeOption = Console.ReadLine();
+                    switch (EntreeOption)
+                    {
+                        case "1":
+                            Ramen();
+                        break;
+
+                        case "2":
+                            Salad();
+                        break;
+
+                        case "3":
+                            Sandwhich();
+                        break;
+                            
+                        default:   
+                            Console.WriteLine("Please enter a valid option!");
+                        break;
+                    }
                     break;
+                
                 case "3":
                     Console.WriteLine("Bye Bye!");
                     running = false;
                     break;
+                
                 default:   
                     Console.WriteLine("Please enter a valid option!");
                     break;
