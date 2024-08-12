@@ -6,5 +6,6 @@ CREATE TABLE lunches (
 
 Drop Table lunches;
 
+
 SELECT * From lunches;
 
